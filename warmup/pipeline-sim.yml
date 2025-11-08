@@ -1,0 +1,10 @@
+stages:
+- stage: Deploy
+  jobs:
+  - job: Terraform
+    steps:
+    - script: |
+        terraform init
+        terraform plan
+        terraform apply -auto-approve
+      displayName: 'Run Terraform'
