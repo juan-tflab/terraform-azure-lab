@@ -40,10 +40,6 @@ module "storage" {
   location = var.location
 }
 
-output "vm_public_ip" {
-  value = module.compute.public_ip
-}
-
 output "vnet_name" {
   value = module.network.vnet_name
 }
